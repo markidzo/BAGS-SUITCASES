@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag Suitcases</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <div class="li1">
+            <button id="openSearch"><img src="img/search.png" alt="" class="searchImg"></button>
+            <a href=""><li class="golovna">ГОЛОВНА</li></a>
+            <a href=""><li class="catalog">КАТАЛОГ</li></a>
+            <a href=""><li class="magazin">МАГАЗИН</li></a>
+            <a href=""><li class="opt">ОПТОВІ ЗАМОВЛЕННЯ</li></a>
+        </div>
+
+        <h1 class="logo">BAGS SUITCASES</h1>
+
+        <div class="li2">
+            <a href=""><li class="pronas">ПРО НАС</li></a>
+            <a href=""><li class="info">ІНФО</li></a>
+            <a href=""><li class="contacts">КОНТАКТИ</li></a>
+            <button id="openBasket"><img src="img/basket.png" alt="" class="basket"></button>
+        </div>
+
+
+        <div id="modalSearch" class="modal-search">
+            <div class="modal1">
+                <button class="close-btn" id="closeSearch"><img src="img/close.png" alt=""></button>
+                <div class="inp">
+                    <input type="text" placeholder="Пошук" maxlength="50">
+                    <button><img src="img/search.png" alt="" class="searchingImg"></button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="modalBasket" class="modal-basket">
+            <div class="modal2">
+                <button class="close-Bask" id="closeBasket"><img src="img/close.png" alt=""></button>
+                <h3 class="text-basket">Ваші товари</h3>
+                <p id="empty-cart-message" class="emptyCart">Кошик порожній</p>
+                <ul id="cart-items" class="cartItems">
+                  <!-- Список товарів -->
+                </ul>
+                <div class="sum">
+                  <p class="totalPrice">Загальна сума: <span id="total-price">0</span> грн</p>
+                  <button id="clear-cart" class="clearCart">Очистити кошик</button>
+            </div>
+        </div>
+    </header>
+
+
+
+         <!-- header -->
+
+    <section class="banner">
+        <p>Lorem ipsum</p>
+        <p>Dolor sit amet</p>
+        <h1>Lorem</h1>
+        <h1>Lorem, ipsum dolor.</h1>
+        <h1>Lorem, ipsum.</h1>
+        <a href="">КАТАЛОГ</a>
+    </section>
+
+
+    <section class="katalog">
+        <h1 class="shapka">КУПИТИ ВАЛІЗИ BAGS SUITCASES</h1>
+        <div class="text1">
+            <h4 class="up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis debitis repellendus quidem porro cumque nihil quo amet officiis excepturi aspernatur quae quos nam placeat velit beatae cupiditate, dolorum, fugiat blanditiis eveniet. Dolore sunt maxime nostrum, quae soluta est?</h4>
+
+            <p>1- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni repellat deleniti ex et reiciendis.</p>
+            <p>2- Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sint ab ipsa delectus in eveniet illo!</p>
+            <p>3- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, accusamus reprehenderit ad minus tenetur aut asperiores.</p>
+            <p>4- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsa libero officiis quam fugit?</p>
+
+            <h4 class="down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam sequi dolorum, consequatur expedita aspernatur placeat iusto repellendus, ut, ipsum consequuntur. Impedit, nulla facilis nisi beatae consectetur, nesciunt tempore eaque eos voluptates quam dolor ullam non? Alias!</h4>
+        </div>
+
+
+        <div class="photos">
+            <div class="absPlastik">
+                <h1>ABS</h1>
+                <h1>ПЛАСТИК</h1>
+            </div>
+
+            <div class="politelenElit">
+                <h1>ПОЛІПРОПІЛЕН</h1>
+                <h1>ELITE</h1>
+            </div>
+
+            <div class="tkaniniValisi">
+                <h1>ТКАНИННІ ВАЛІЗИ</h1>
+            </div>
+
+            <div class="valisiDityachi">
+                <h1>ВАЛІЗИ ДИТЯЧІ</h1>
+            </div>
+        </div>
+
+
+        <div class="text2">
+            <div class="checkList2">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p></p>
+            </div>
+            
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsum beatae illo nostrum minus ut totam, hic ea assumenda quaerat. Mollitia culpa, ratione ipsam minima fuga nemo quae iste fugit, repellendus saepe, sequi nisi excepturi magni cum voluptatibus animi at?</p>
+
+            <div class="checkList">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <button class="toggle-btn" onclick="toggleText()">
+                    <img src="img/plus.png" alt="plus" class="toggle-icon">
+                </button>
+            </div>
+            
+            <div class="text-box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum veniam voluptates veritatis. Rem laborum, quo iste in doloremque nisi reiciendis quis amet quas cumque eos repudiandae, dolor voluptatibus aut architecto maxime deleniti consequuntur fugit tenetur sapiente soluta enim optio quidem. Eligendi dolore quas voluptates necessitatibus, distinctio dolor cumque dolorem, praesentium at veniam tempore obcaecati pariatur eaque ipsam aut corporis! Facilis distinctio sint neque fugiat, molestias eum consequuntur excepturi itaque molestiae vitae non nostrum sunt odio! Numquam asperiores consequuntur illum a fuga molestiae officia fugit ipsam odio, nihil reprehenderit, ex culpa magni aut repudiandae nesciunt necessitatibus. Qui rem fugit hic earum consequuntur deserunt autem, nobis cupiditate facilis quia, sapiente facere?
+            </div>
+            <p class="check">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error esse porro eius modi aspernatur quod at sunt iusto voluptate voluptatibus, quia tenetur odit delectus consequuntur saepe debitis optio laudantium corrupti dolores, inventore animi aperiam voluptates aut enim? Debitis, provident distinctio!</p>
+        </div>
+
+
+    </section>
+
+
+
+
+    <footer>
+        <div class="line"></div>
+        <div class="foot">
+            <div class="one">
+                <p>BAGS SUITCASES</p>
+            </div>
+
+            <div class="two">
+                <div class="footHead">
+                    <a href=""><li class="catalog">КАТАЛОГ</li></a>
+                    <a href=""><li class="pronas">ПРО НАС</li></a>
+                    <a href=""><li class="contacts">КОНТАКТИ</li></a>
+                </div>
+                <div class="meta">
+                    <img src="img/instagram.png" alt="">
+                    <img src="img/facebook.png" alt="">
+                </div>
+                <div class="rozrobka">
+    
+                </div>
+            </div>
+            
+        
+
+            <div class="grafik">
+                <p>Графік роботи:</p>
+                <p>Пн-Пт: 9:00 - 17:00</p>
+                <p>Сб-Нд: вихідні</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
