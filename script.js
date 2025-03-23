@@ -45,3 +45,46 @@ function toggleText() {
         icon.src = "img/plus.png"; // Іконка плюса
     }
 }
+
+
+
+// Підключаємо ScrollMagic (переконайтеся, що бібліотека підключена)
+var controller = new ScrollMagic.Controller();
+
+// Створюємо змінні для відстеження прокрутки
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let header = document.querySelector("header");
+    
+    if (currentScroll > lastScrollTop) {
+        // При скролі вниз ховаємо хедер
+        header.classList.remove("sticky");
+    } else {
+        // При скролі вверх показуємо хедер
+        header.classList.add("sticky");
+    }
+    lastScrollTop = currentScroll;
+});
+
+// CSS для плавності
+const style = document.createElement('style');
+style.innerHTML = `
+    header {
+        position: fixed;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 15px 0;
+        transition: top 0.3s ease-in-out;
+    }
+    .sticky {
+        top: 0;
+    }
+    body {
+        padding-top: 60px; /* Додаємо відступ, щоб уникнути стрибків */
+    }
+`;
+document.head.appendChild(style);
