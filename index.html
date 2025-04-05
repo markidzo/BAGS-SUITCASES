@@ -3,56 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bag Suitcases</title>
+    <title>ГОЛОВНА</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="img/logoPNG.PNG" type="image    ">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-
-        <div class="li1">
-            <button id="openSearch"><img src="img/search.png" alt="" class="searchImg"></button>
-            <a href=""><li class="golovna">ГОЛОВНА</li></a>
-            <a href=""><li>КАТАЛОГ</li></a>
-            <a href=""><li class="magazin">МАГАЗИН</li></a>
-            <a href=""><li class="opt">ОПТОВІ ЗАМОВЛЕННЯ</li></a>
-        </div>
-
-        <h1 class="logo">BAGS SUITCASES</h1>
-
-        <div class="li2">
-            <a href=""><li class="pronas">ПРО НАС</li></a>
-            <a href=""><li class="info">ІНФО</li></a>
-            <a href=""><li class="contacts">КОНТАКТИ</li></a>
-            <button id="openBasket"><img src="img/basket.png" alt="" class="basket"></button>
-        </div>
-
-
-        <div id="modalSearch" class="modal-search">
-            <div class="modal1">
-                <button class="close-btn" id="closeSearch"><img src="img/close.png" alt=""></button>
-                <div class="inp">
-                    <input type="text" placeholder="Пошук" maxlength="50">
-                    <button><img src="img/search.png" alt="" class="searchingImg"></button>
+        <nav class="menu" id="menu">
+            <div class="li1">
+                <!-- <button id="openSearch"><img src="img/search.png" alt="" class="searchImg"></button> -->
+                <a href="index.html"><li class="golovna">ГОЛОВНА</li></a>
+                <a href="#photi"><li>КАТАЛОГ</li></a>
+                <a href="shop.html"><li class="magazin">МАГАЗИН</li></a>
+            </div>
+    
+            <h1 class="logo"><img src="img/logoPNG.PNG" alt=""></h1>
+    
+            <div class="li2">
+                <a href="about.html"><li class="pronas">ПРО НАС</li></a>
+                <a href="contacts.html"><li>КОНТАКТИ</li></a>
+                <button id="openBasket"><img src="img/basket.png" alt="" class="basket"></button>
+            </div>
+    
+    
+            <!-- <div id="modalSearch" class="modal-search">
+                <div class="modal1">
+                    <button class="close-btn" id="closeSearch"><img src="img/close.png" alt=""></button>
+                    <div class="inp">
+                        <input type="text" placeholder="Пошук" maxlength="50">
+                        <button><img src="img/search.png" alt="" class="searchingImg"></button>
+                    </div>
+                </div>
+            </div> -->
+        
+            <div id="modalBasket" class="modal-basket">
+                <div class="modal2">
+                    <button class="close-Bask" id="closeBasket"><img src="img/close.png" alt=""></button>
+                    <h3 class="text-basket">Ваші товари</h3>
+                    <ul id="cart-items" class="cartItems">
+                      
+                    </ul>
+                    <div class="sum">
+                        <a href="checkout.html" class="oform">ОФОРМИТИ ЗАМОВЛЕННЯ</a>
+                      <button onclick="clearCart()">Очистити кошик</button>
                 </div>
             </div>
-        </div>
+        </nav>
+        <button id="burger-btn" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
     
-        <div id="modalBasket" class="modal-basket">
-            <div class="modal2">
-                <button class="close-Bask" id="closeBasket"><img src="img/close.png" alt=""></button>
-                <h3 class="text-basket">Ваші товари</h3>
-                <p id="empty-cart-message" class="emptyCart">Кошик порожній</p>
-                <ul id="cart-items" class="cartItems">
-                  <!-- Список товарів -->
-                </ul>
-                <div class="sum">
-                  <p class="totalPrice">Загальна сума: <span id="total-price">0</span> грн</p>
-                  <button id="clear-cart" class="clearCart">Очистити кошик</button>
-            </div>
-        </div>
+    
+    
     </header>
 
 
@@ -60,30 +67,28 @@
          <!-- header -->
 
     <section class="banner">
-        <p>Lorem ipsum</p>
-        <p>Dolor sit amet</p>
-        <h1>Lorem</h1>
-        <h1>Lorem, ipsum dolor.</h1>
-        <h1>Lorem, ipsum.</h1>
-        <a href="">КАТАЛОГ</a>
+        <h1>ПОДОРОЖУЙ</h1>
+        <h1>З КОМФОРТОМ ТА</h1>
+        <h1>ЗРУЧНІСТЮ</h1>
+        <a href="#photi">КАТАЛОГ</a>
     </section>
 
 
     <section class="katalog">
-        <h1 class="shapka">КУПИТИ ВАЛІЗИ BAGS SUITCASES</h1>
+        <h1 class="shapka">КУПИТИ ВАЛІЗИ FLYBAG</h1>
         <div class="text1">
-            <h4 class="up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis debitis repellendus quidem porro cumque nihil quo amet officiis excepturi aspernatur quae quos nam placeat velit beatae cupiditate, dolorum, fugiat blanditiis eveniet. Dolore sunt maxime nostrum, quae soluta est?</h4>
+            <h4 class="up">Будь-яка поїздка буде комфортною, якщо її супроводжуватиме якісна валіза. З її допомогою легко брати із собою всі необхідні речі, а на зворотному шляху ще й прихопити нові покупки. Для вірного вибору слід мати чек-лист із основними вимогами до виробу:</h4>
 
-            <p>1- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni repellat deleniti ex et reiciendis.</p>
-            <p>2- Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sint ab ipsa delectus in eveniet illo!</p>
-            <p>3- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, accusamus reprehenderit ad minus tenetur aut asperiores.</p>
-            <p>4- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat ipsa libero officiis quam fugit?</p>
+            <p>1. Габарити (розміри), що визначають, скільки речей вміщує валіза і чи відповідає вона вимогам компанії-перевізника.</p>
+            <p>2. Матеріали і фурнітура (блискавка і замок), що відповідають за зовнішній вигляд виробу і безпеку його вмісту.</p>
+            <p>3. Ручки і колеса, якість яких впливає на зручність перенесення і перевезення валізи.</p>
+            <p>4. Розміщення речей всередині валізи, у внутрішньому й зовнішньому відділеннях.</p>
 
-            <h4 class="down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam sequi dolorum, consequatur expedita aspernatur placeat iusto repellendus, ut, ipsum consequuntur. Impedit, nulla facilis nisi beatae consectetur, nesciunt tempore eaque eos voluptates quam dolor ullam non? Alias!</h4>
+            <h4 class="down">Це основні вимоги стосовно технічної частини, яка відповідає за надійність і довговічність виробу. Однак не слід забувати і про зовнішній вигляд, адже це аксесуар, важливо, аби він подобався своєму власнику. Поєднати всі вище перераховані вимоги допоможуть Wings валізи, в яких оптимальне співвідношення якості й вартості.</h4>
         </div>
 
 
-        <div class="photos">
+        <div class="photos" id="photi">
             <div class="absPlastik">
                 <h1>ABS</h1>
                 <h1>ПЛАСТИК</h1>
@@ -106,22 +111,25 @@
 
         <div class="text2">
             <div class="checkList2">
-                <h2>Lorem ipsum dolor sit.</h2>
+                <h2>Переваги товарів відомого бренду</h2>
                 <p></p>
             </div>
             
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsum beatae illo nostrum minus ut totam, hic ea assumenda quaerat. Mollitia culpa, ratione ipsam minima fuga nemo quae iste fugit, repellendus saepe, sequi nisi excepturi magni cum voluptatibus animi at?</p>
+            <p>Валізи польського виробника Wings вирізняються високою якість матеріалів, міцністю конструкції, ергономічною внутрішньою та зовнішньою організацією. Користувачі лишають гарні відгуки, адже задоволені, наскільки вироби витримують всі поїздки й залишаються в хорошому стані з плином часу. Можна швидко вибрати валізу під свої потреби, достатньо розглянути всі пункти чек-листа більш детально.</p>
 
             <div class="checkList">
-                <h2>Lorem ipsum dolor sit.</h2>
+                <h2>ЧЕК-ЛИСТ</h2>
                 <button class="toggle-btn" onclick="toggleText()">
                     <img src="img/plus.png" alt="plus" class="toggle-icon">
                 </button>
             </div>
             
-            <div class="text-box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum veniam voluptates veritatis. Rem laborum, quo iste in doloremque nisi reiciendis quis amet quas cumque eos repudiandae, dolor voluptatibus aut architecto maxime deleniti consequuntur fugit tenetur sapiente soluta enim optio quidem. Eligendi dolore quas voluptates necessitatibus, distinctio dolor cumque dolorem, praesentium at veniam tempore obcaecati pariatur eaque ipsam aut corporis! Facilis distinctio sint neque fugiat, molestias eum consequuntur excepturi itaque molestiae vitae non nostrum sunt odio! Numquam asperiores consequuntur illum a fuga molestiae officia fugit ipsam odio, nihil reprehenderit, ex culpa magni aut repudiandae nesciunt necessitatibus. Qui rem fugit hic earum consequuntur deserunt autem, nobis cupiditate facilis quia, sapiente facere?
+            <div class="text-box">ПАРАМЕТРИ. Висота, ширина й глибина валізи – це габарити, за якими визначається місткість валізи. Тут важливо знати ціль поїздок і необхідний об’єм речей, які слід брати із собою. Існують три основні розміри валіз: великий (L), середній (M), маленький (S). Можна обрати один варіант, або одразу декілька, щоб бути впевненим за комфортну поїздки і можливість привезти щось додому. Коли треба їхати всією сім’єю або підготуватися до шопінгу, краще обирати перший варіант. Другий знадобиться в недовгій подорожі вдвох або на довший термін для однієї людини. Маленькі валізи обирають як ручну поклажу (треба перевіряти вимоги перевізника) із компактно складеними найважливішими речами, додаток до більшого багажу.
+                МАТЕРІАЛИ ТА ФУРНІТУРА. Йдеться про корпус виробу, його ручки, блискавки та замки. Для виробництва легких валіз, які не бояться тертя, пилу й вологи використовується міцний поліестер. Валізи Wings виготовляються із тканини CORDURA 1200D і витримують значні навантаження. Нюанс – крихкі речі слід гарно упаковувати, аби вони не пошкодилися під тиском на корпус виробу. Такі валізи не слід придавлювати зверху, або пхати до багажного відділу з обмеженим місцем. Якщо валізу треба часто перевозити в багажних відділеннях, або класти зверху інші речі, слід звернути увагу на пластикові корпуси. Вони трохи важчі за тканинні, але більш міцні й ударостійкі. ABS пластик – гнучкий і стійкий до тертя, він найчастіше покривається яскравими малюнками. Полікарбонат PRIME також гнучкий, іще міцніший. Поліпропілен ELITE – трохи важчий за попередні варіанти, що дозволяє комфортно везти виріб напівпорожнім. Підвищена міцність і стійкість до зносу робить його довговічним. Фурнітура виготовляється із надійних матеріалів, тому блискавка «ходить» плавно, відкривається і закривається швидко. Телескопічна висувна ручка дозволяє перевозити валізи без зайвих зусиль, а інші ручки – комфортного переносити в руках. В застібках блискавки є отвори для кріплення кодового замка, який триматиме багаж в безпеці.
+                КОЛЕСА. Важливий аспект, що впливає на швидкість і плавність перевезення та обертання валізи. Польська компанія оснащує вироби двома або чотирма якісними колесами, перший варіант – лише для тканинних аксесуарів. Різниця в тому, що чотири колеса – це просте перевезення важкого багажу рівними поверхнями, особливо коли не треба постійно нахиляти валізу. Користувач гарантовано пересуватиме свій багаж без особливих зусиль. Якщо ж заплановано йти поганими дорогами (стежками, битим асфальтом), то двоколісні валізи стануть в нагоді. Вони розраховані саме на перевезення під кутом, зміщення центру ваги не погіршить транспортування.
+                РОЗМІЩЕННЯ РЕЧЕЙ. Важливо, аби всередині валізи можна було вмістити максимально речей. Для цього відділення розділяються: одне оснащене пасками, інше закривається на блискавку. У випадку із тканинним виробом додатково можуть бути зовнішні кишені на блискавках, однак зазвичай вони не забезпечені кодовим замком.
             </div>
-            <p class="check">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error esse porro eius modi aspernatur quod at sunt iusto voluptate voluptatibus, quia tenetur odit delectus consequuntur saepe debitis optio laudantium corrupti dolores, inventore animi aperiam voluptates aut enim? Debitis, provident distinctio!</p>
+            <p class="check">Яку роль відіграє дизайн валізи? Зазвичай практичну, щоб на виробі не було видно забруднень і вони легко прибиралися. Друга, не менш важлива, візуальна складова, аби користувачеві подобався зовнішній вигляд аксесуара. Ці бажання можна об’єднати, обравши навіть найяскравішу валізу Wings, яка привертатиме увагу і не губитиметься на багажній стрічці. Справа в тому, що тканинні вироби покриваються тефлоном, а пластикові – відштовхують пил і вологу. Обидва варіанти гарно піддаються чищенню і довго зберігають вигляд як після покупки.</p>
         </div>
 
 
@@ -134,30 +142,31 @@
         <div class="line"></div>
         <div class="foot">
             <div class="one">
-                <p>BAGS SUITCASES</p>
+                <p>FLYBAGS</p>
             </div>
 
             <div class="two">
                 <div class="footHead">
-                    <a href=""><li class="catalog">КАТАЛОГ</li></a>
-                    <a href=""><li class="pronas">ПРО НАС</li></a>
-                    <a href=""><li class="contacts">КОНТАКТИ</li></a>
+                    <a href="#photi"><li class="catalog">КАТАЛОГ</li></a>
+                    <a href="about.html"><li class="pronas">ПРО НАС</li></a>
+                    <a href="contacts.html"><li>КОНТАКТИ</li></a>
                 </div>
                 <div class="meta">
-                    <img src="img/instagram.png" alt="">
-                    <img src="img/facebook.png" alt="">
+                    <a href="https://www.instagram.com/bags_suitcases_lviv?igsh=N2N6NDhneGx6bzgz"><img src="img/instagram.png" alt=""></a>
                 </div>
                 <div class="rozrobka">
-    
+                    <p>Розробка сайту <a href="https://markidzo.github.io/SmertenkoMarkPortfolio/"><b>Mark Smertenko</b></a></p>
                 </div>
             </div>
             
         
 
             <div class="grafik">
-                <p>Графік роботи:</p>
-                <p>Пн-Пт: 9:00 - 17:00</p>
-                <p>Сб-Нд: вихідні</p>
+                <p>Наша адреса:</p>
+                <p>м.Львів вул. Якова Рапапорта 5</p>
+                <p class="tel">Номер телефону:</p>
+                <p>+380931414508</p>
+                <p>+380679049244</p>
             </div>
         </div>
     </footer>
@@ -168,6 +177,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
     <script src="script.js"></script>
+
 </body>
 </html>

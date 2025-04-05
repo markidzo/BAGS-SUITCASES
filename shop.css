@@ -1,0 +1,889 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: inter;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 65px;
+    align-items: center;
+    /* position: sticky;
+    top: 0;
+    z-index: 999; */
+    background: white;
+}
+
+header .li1{
+    display: flex;
+    flex-direction: row;
+
+}
+
+header .li2{
+    display: flex;
+    flex-direction: row;
+}
+
+.searchImg{
+    width: 15px;
+    margin: 15px;
+}
+.basket{
+    width: 15px;
+    margin: 15px;   
+}
+
+header button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+header li{
+    font-size: 13px;
+    margin: 15px;
+    color: #000000;
+    display:inline-block; 
+    text-transform:uppercase;
+    font-family: inter;
+}
+
+li:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #000000;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+
+header h1{
+    font-size: 50px;
+}
+
+
+
+.modal-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s, visibility 0.6s;
+}
+.modal1 {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.close-btn {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-btn img{
+    width: 30px;
+}
+.modal-search.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.searchingImg img{
+    width: 22px;
+}
+
+.modal1 input{
+    width: 300px;
+    font-size: 25px;
+    border-bottom: 3px solid black;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.modal1 button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.inp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+} 
+
+
+
+
+
+
+.oform{
+    background-color: rgb(214, 214, 214);
+    font-size: 13px;
+}
+
+
+
+
+
+.modal-basket {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items:start;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s, visibility 0.6s;position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.modal2{
+    position: fixed;
+    right: 20px;
+    width: 250px;
+    background: white;
+    padding: 15px;
+    transition: top 0.3s;
+    margin-top: 100px;
+}
+
+.modalBasket.active .basket {
+    top: 20px;
+}
+.close-Bask {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.modal-basket.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal2 p{
+    font-size: 15px;
+}
+
+.modal2 img{
+    width: 25px;
+}
+
+
+li:hover:after{
+    transform: scaleX(1);
+}
+
+.logo img{
+    width: 150px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+
+header a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+
+/* header */
+
+.banner{
+    height: 100%;
+    background: url(img/ANOTHER.jpg) no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.banner p{
+    font-size: 14px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.banner h1{
+    font-size: 56px;
+    margin-right: 50px;
+    font-weight: 500; /* 100 - найтонший, 900 - найжирніший */
+}
+
+.banner a{
+    width: 135px;
+    height: 45px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin-right: 50px;
+}
+
+.banner a:hover{
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+}
+
+
+
+nav{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 65px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Основні стилі для меню */
+.menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  /* Ховаємо бургер на великих екранах */
+  .burger {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: black;
+    transition: 0.4s;
+  }
+
+  .logoBurg{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-image {
+    margin-top: 50px;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .thumbnail-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .thumbnail:hover, .thumbnail.active-thumb {
+    border-color: #333;
+  }
+
+
+.product-images{
+    margin-left: 15%;
+}
+
+
+
+
+
+.PP06_L{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /* Центр по горизонталі */
+    align-items: flex-start;  /* Якщо треба: або center */
+    padding: 20px;
+    gap: 20px;   
+}
+
+.info h1{
+    font-weight: 300;
+    font-size: 32px;
+    width: 65vh;
+    width: 60%;
+}
+
+
+.info{
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.price{
+    font-size: 19px;
+    color: red;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+.color-selector{
+    width: 300px;
+    height: 55px;
+    font-size: 14px;
+    border: 1px solid black;
+    margin-top: 30px;
+}
+
+
+.addItem{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;   
+    display: flex;
+    align-items: center;
+}
+
+.quantity-container{
+    width: 80px;
+    height: 52px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-container button{
+    background: transparent;
+    border: none;
+    margin: 10px;
+}
+
+.add-to-basket{
+    width: 245px;
+    height: 55px;
+    background: black;
+    border: 2px solid black;
+    transition: 0.7s;
+    font-size: 12px;
+    color: white;
+    margin-left: 30px;
+}
+
+.add-to-basket:hover{
+    background: rgb(160, 160, 160);
+    transition: 0.7s;
+    color: black;
+}
+
+
+.sizes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.sizes a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    transition: 0.6s;
+}
+
+.sizes a:hover{
+    opacity: 0.6;
+    transition: 0.6s;
+}
+
+.seria a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    transition: 0.6s;
+}
+
+.seria a:hover{
+    opacity: 0.6;
+    transition: 0.6s;
+}
+
+.seria{
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.allInfo{
+    margin-top: 30px;
+    width: 70%;
+    font-size: 14px;
+}
+
+.allInfo p{
+ font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.line{
+    margin-top: 100px;
+    width: 80%;
+    border-bottom: 3px solid black;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer p{
+    font-size: 15px;
+}
+
+
+.foot{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.one p{
+    font-size: 15px;
+}
+
+.two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.tel{
+    margin-top: 20px;
+}
+
+.footHead a{
+    font-size: 13px;
+    color: #000000;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.footHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300px;
+    margin-bottom: 25px;
+}
+
+.grafik{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 50px;
+}
+
+.grafik p{
+    font-size: 14px;
+}
+
+.rozrobka p{
+    font-size: 11px;
+}
+
+.rozrobka a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+.rozrobka{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1400px){
+    .PP06_L{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .thumbnail-row {
+        width: 70%;
+      }
+    
+
+      .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    
+}
+
+
+
+
+
+
+
+@media(max-width:1060px){
+    .grafik{
+        align-items: center;
+        margin-top: 50px;
+    }
+
+
+    .filters{
+        width: 270px;
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .color-option{
+        width: 14px;
+        height: 14px;
+    }
+}
+
+
+@media(max-width:750px){
+    .one{
+        display: none;
+
+    }
+
+    .two{
+        margin-left: 0px;
+    }
+
+    .foot{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-images{
+        margin-left: 10%;
+    }
+
+}
+
+
+@media(max-width:530px){
+    .product-images{
+        margin-left: 0%;
+    }
+
+    .thumbnail-row {
+        width: 90%;
+      }
+
+
+      .add-to-basket {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+
+
+      .addItem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main-img{
+        display: flex;
+        justify-content: center;
+      }
+
+}
+
+
+
+
+
+@media(max-width:440px){
+    .main-image {
+        max-width: 200px;
+      }
+
+
+      .thumbnail {
+        width: 40px;
+        height: 40px;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1000px){
+    .burger {
+        display: flex;
+      }
+  
+  
+      
+      .burg{
+          display: flex;
+          justify-content: space-around;
+      }
+      .logoBurg{
+          display: flex;
+          width: 120px;
+      }
+  
+      .sizes{
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .modal2{
+          position: fixed;
+          margin-right: 70px;
+          background: white;
+          transition: top 0.3s;
+          margin-top: 30px;
+          border: 2px solid black;
+      }
+  
+      .main-image {
+        max-width: 60%;
+      }
+  
+      
+  .modal-basket {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.6s, visibility 0.6s;position: fixed;
+      top: 0;
+      left: 0;
+  
+      background: rgba(255, 255, 255, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  
+  
+  
+      
+      header li{
+          font-size: 15px;
+      }
+    
+      .logo{
+          display: none;
+      }
+  
+   
+      .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 30%;
+        background: rgba(255, 255, 255, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+      }
+  
+  
+    
+      .menu a {
+        transition: color 0.3s;
+      }
+    
+      .menu a:hover {
+        color: #ffcc00;
+      }
+    
+      /* Анімація відкриття */
+      .menu.active {
+        transform: translateY(0);
+      }
+    
+      /* Анімація бургер-іконки */
+      .burger.active span:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+      }
+    
+      .burger.active span:nth-child(2) {
+          display: none;
+      }
+    
+      .burger.active span:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+      }
+}

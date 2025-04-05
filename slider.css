@@ -1,0 +1,22 @@
+.slider-container {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.slider-for img, .slider-nav img {
+    width: 50%;
+    height: auto;
+}
+
+.slider-for img{
+    margin-left: 28%;
+}
+.slider-nav {
+    margin-top: 10px;
+}
+
+.slider-nav img {
+    cursor: pointer;
+    padding: 50px;
+}

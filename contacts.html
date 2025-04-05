@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLYBAG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="img/logoPNG.PNG" type="image    ">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="li1">
+            <button id="openSearch"><img src="img/search.png" alt="" class="searchImg"></button>
+            <a href=""><li class="golovna">ГОЛОВНА</li></a>
+            <a href=""><li>КАТАЛОГ</li></a>
+            <a href="shop.html"><li class="magazin">МАГАЗИН</li></a>
+        </div>
+
+        <h1 class="logo"><img src="img/logoPNG.PNG" alt=""></h1>
+
+        <div class="li2">
+            <a href=""><li class="pronas">ПРО НАС</li></a>
+            <!-- <a href=""><li class="info">ІНФО</li></a> -->
+            <a href=""><li class="contacts">КОНТАКТИ</li></a>
+            <button id="openBasket"><img src="img/basket.png" alt="" class="basket"></button>
+        </div>
+
+
+        <div id="modalSearch" class="modal-search">
+            <div class="modal1">
+                <button class="close-btn" id="closeSearch"><img src="img/close.png" alt=""></button>
+                <div class="inp">
+                    <input type="text" placeholder="Пошук" maxlength="50">
+                    <button><img src="img/search.png" alt="" class="searchingImg"></button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="modalBasket" class="modal-basket">
+            <div class="modal2">
+                <button class="close-Bask" id="closeBasket"><img src="img/close.png" alt=""></button>
+                <h3 class="text-basket">Ваші товари</h3>
+                <p id="empty-cart-message" class="emptyCart">Кошик порожній</p>
+                <ul id="cart-items" class="cartItems">
+                  <!-- Список товарів -->
+                </ul>
+                <div class="sum">
+                  <p class="totalPrice">Загальна сума: <span id="total-price">0</span> грн</p>
+                  <button id="clear-cart" class="clearCart">Очистити кошик</button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section class="contacts">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.8835829417767!2d24.017146676022538!3d49.8446449307984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add745e1380cb%3A0x2b93b1ccc02cf422!2z0LLRg9C70LjRhtGPINCv0LrQvtCy0LAg0KDQsNC_0L_QsNC_0L7RgNGC0LAsIDUsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1743111551169!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        <div class="telefone">
+            <h3>Наша адреса:</h3>
+            <h3>м.Львів вул. Якова Рапапорта 5</h3>
+            <h3 class="tel">Номер телефону:</h3>
+            <h3 class="copy-text" onclick="copyText(this)">+380931414508</h3>
+            <h3 class="copy-text" onclick="copyText(this)">+380679049244</h3>
+        </div>
+    </section>
+
+
+
+       
+
+
+    <footer>
+        <div class="line"></div>
+        <div class="foot">
+            <div class="one">
+                <p>FLYBAGS</p>
+            </div>
+
+            <div class="two">
+                <div class="footHead">
+                    <a href=""><li class="catalog">КАТАЛОГ</li></a>
+                    <a href=""><li class="pronas">ПРО НАС</li></a>
+                    <a href=""><li class="contacts">КОНТАКТИ</li></a>
+                </div>
+                <div class="meta">
+                    <img src="img/instagram.png" alt="">
+                    <img src="img/facebook.png" alt="">
+                </div>
+                <div class="rozrobka">
+    
+                </div>
+            </div>
+            
+        
+
+            <div class="grafik">
+                <p>Наша адреса:</p>
+                <p>м.Львів вул. Якова Рапапорта 5</p>
+                <p class="tel">Номер телефону:</p>
+                <p>+380931414508</p>
+                <p>+380679049244</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function copyText(element) {
+            navigator.clipboard.writeText(element.innerText).then(() => {
+                alert("Текст скопирован: " + element.innerText);
+            });
+        }
+    </script>
+
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

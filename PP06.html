@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP06</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <div class="li1">
+            <button id="openSearch"><img src="img/search.png" alt="" class="searchImg"></button>
+            <a href="index.html"><li class="golovna">ГОЛОВНА</li></a>
+            <a href=""><li>КАТАЛОГ</li></a>
+            <a href=""><li class="magazin">МАГАЗИН</li></a>
+        </div>
+
+        <h1 class="logo">BAGS SUITCASES</h1>
+
+        <div class="li2">
+            <a href=""><li class="pronas">ПРО НАС</li></a>
+            <!-- <a href=""><li class="info">ІНФО</li></a> -->
+            <a href=""><li class="contacts">КОНТАКТИ</li></a>
+            <button id="openBasket"><img src="img/basket.png" alt="" class="basket"></button>
+        </div>
+
+
+        <div id="modalSearch" class="modal-search">
+            <div class="modal1">
+                <button class="close-btn" id="closeSearch"><img src="img/close.png" alt=""></button>
+                <div class="inp">
+                    <input type="text" placeholder="Пошук" maxlength="50">
+                    <button><img src="img/search.png" alt="" class="searchingImg"></button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="modalBasket" class="modal-basket">
+            <div class="modal2">
+                <button class="close-Bask" id="closeBasket"><img src="img/close.png" alt=""></button>
+                <h3 class="text-basket">Ваші товари</h3>
+                <p id="empty-cart-message" class="emptyCart">Кошик порожній</p>
+                <ul id="cart-items" class="cartItems">
+                  <!-- Список товарів -->
+                </ul>
+                <div class="sum">
+                  <p class="totalPrice">Загальна сума: <span id="total-price">0</span> грн</p>
+                  <button id="clear-cart" class="clearCart">Очистити кошик</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop">
+        <div class="filtrs">
+
+        </div>
+
+        <div class="tovari">
+            <a href="PP06_L.html">
+                <div class="PP06_L">
+                    <img src="img/shopImg/PP06_L/1-Title.png" alt="" class="tovar">
+                    <p class="title">Велика дорожня поліпропіленова валіза WINGS SPARROW PP06 L 28"</p>
+                    <span class="price">2 459 грн </span>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="PP06_M">
+                    <img src="img/shopImg/PP06_M/1-Title.png" alt="" class="tovar">
+                    <p class="title">Середня дорожня поліпропіленова валіза WINGS SPARROW PP06 M 24"</p>
+                    <span class="price">2 449 грн </span>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="PP06_S">
+                    <img src="img/shopImg/PP06_S/1-Title.png" alt="" class="tovar">
+                    <p class="title">Мала дорожня поліпропіленова валіза WINGS SPARROW PP06 S 20"</p>
+                    <span class="price">1 499 грн </span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="line"></div>
+        <div class="foot">
+            <div class="one">
+                <p>BAGS SUITCASES</p>
+            </div>
+
+            <div class="two">
+                <div class="footHead">
+                    <a href=""><li class="catalog">КАТАЛОГ</li></a>
+                    <a href=""><li class="pronas">ПРО НАС</li></a>
+                    <a href=""><li class="contacts">КОНТАКТИ</li></a>
+                </div>
+                <div class="meta">
+                    <img src="img/instagram.png" alt="">
+                    <img src="img/facebook.png" alt="">
+                </div>
+                <div class="rozrobka">
+    
+                </div>
+            </div>
+            
+        
+
+            <div class="grafik">
+                <p>Графік роботи:</p>
+                <p>Пн-Пт: 9:00 - 17:00</p>
+                <p>Сб-Нд: вихідні</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+
+    <script src="shop.js"></script>
+
+</body>
+</html>

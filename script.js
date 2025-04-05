@@ -1,34 +1,64 @@
-const openSearch = document.getElementById("openSearch");
-const closeSearch = document.getElementById("closeSearch");
-const modalSearch = document.getElementById("modalSearch");
+// const openSearch = document.getElementById("openSearch");
+// const closeSearch = document.getElementById("closeSearch");
+// const modalSearch = document.getElementById("modalSearch");
 
-openSearch.addEventListener("click", () => {
-    modalSearch.classList.add("active");
-});
+// openSearch.addEventListener("click", () => {
+//     modalSearch.classList.add("active");
+// });
 
-closeSearch.addEventListener("click", () => {
-    modalSearch.classList.remove("active");
-});
+// closeSearch.addEventListener("click", () => {
+//     modalSearch.classList.remove("active");
+// });
 
 
 
 const openBasket = document.getElementById("openBasket");
-        const closeBasket = document.getElementById("closeBasket");
-        const basketOverlay = document.getElementById("modalBasket");
+const closeBasket = document.getElementById("closeBasket");
+const basketOverlay = document.getElementById("modalBasket");
 
-        openBasket.addEventListener("click", () => {
-            basketOverlay.classList.add("active");
+openBasket.addEventListener("click", () => {
+    basketOverlay.classList.add("active");
+    displayCartItems(); // Вивести вміст кошика при відкритті
+});
+
+closeBasket.addEventListener("click", () => {
+    basketOverlay.classList.remove("active");
+});
+
+document.body.addEventListener("click", (event) => {
+    if (!event.target.closest(".basket") && !event.target.closest("#openBasket")) {
+        basketOverlay.classList.remove("active");
+    }
+}, true);
+
+// Функція для відображення товарів у кошику
+function displayCartItems() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = ''; // Очищаємо попередній вміст
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<li>Ваш кошик порожній.</li>';
+    } else {
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} (Кількість: ${item.quantity}, Колір: ${item.color})`;
+            cartItemsContainer.appendChild(li);
         });
+    }
+}
 
-        closeBasket.addEventListener("click", () => {
-            basketOverlay.classList.remove("active");
-        });
+// Очищення кошика
+function clearCart() {
+    // Очистити localStorage
+    localStorage.removeItem('cart');
 
-        document.body.addEventListener("click", (event) => {
-            if (!event.target.closest(".basket") && !event.target.closest("#openBasket")) {
-                basketOverlay.classList.remove("active");
-            }
-        }, true);
+    // Оновити кількість товарів на іконці кошика
+    updateCartCount();
+
+    // Оновити вміст кошика у модальному вікні
+    displayCartItems();
+}
 
 
 
@@ -57,6 +87,12 @@ let lastScrollTop = 0;
 window.addEventListener("scroll", function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     let header = document.querySelector("header");
+
+    if (window.innerWidth < 800) {
+        // Якщо ширина більше 768px, прибираємо ефект
+        header.classList.remove("sticky");
+        return;
+      }
     
     if (currentScroll > lastScrollTop) {
         // При скролі вниз ховаємо хедер
@@ -88,3 +124,12 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+
+const burger = document.getElementById('burger-btn');
+const menu = document.getElementById('menu');
+
+burger.addEventListener('click', function () {
+  menu.classList.toggle('active');
+  burger.classList.toggle('active');
+});

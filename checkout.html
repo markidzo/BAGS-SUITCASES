@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Оформлення замовлення</h1>
+    </header>
+    <main>
+        <form id="checkout-form">
+            <label for="name">Ім'я та прізвище:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <h2>Ваше замовлення</h2>
+            <ul id="order-summary"></ul>
+            <h3>Загальна сума: <span id="total-price">0</span> грн</h3>
+            
+            <button type="submit">Підтвердити замовлення</button>
+        </form>
+    </main>
+
+   
+
+    <script>
+        document.getElementById("checkout-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            let name = document.getElementById("name").value;
+            let phone = document.getElementById("phone").value;
+            let email = document.getElementById("email").value;
+            let totalPrice = document.getElementById("total-price").innerText;
+            
+            let orderItems = [];
+            document.querySelectorAll("#order-summary li").forEach(item => {
+                orderItems.push(item.innerText);
+            });
+        
+            let message = `🛒 НОВЕ ЗАМОВЛЕННЯ:\n\n👤 Ім'я: ${name}\n📞 Телефон: ${phone}\n📧 Email: ${email}\n\n📦 Товари:\n${orderItems.join("\n")}\n💰 Загальна сума: ${totalPrice} грн`;
+        
+            let botToken = "7978437129:AAHCT1p2Xy_mAED8x_I_p_JAUZI3sEkUkyE";
+            let chatId = "5665269566";
+            let url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        
+            let data = {
+                chat_id: chatId,
+                text: message,
+                parse_mode: "Markdown"
+            };
+        
+            fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert("Замовлення успішно відправлено!");
+                } else {
+                    alert("Помилка при відправці замовлення.");
+                }
+            })
+            .catch(error => {
+                console.error("Помилка:", error);
+                alert("Не вдалося відправити замовлення.");
+            });
+        });
+        </script>
+        
+    <script src="basket.js"></script>
+
+
+</body>
+</html>
